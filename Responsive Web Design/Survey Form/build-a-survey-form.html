@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>HTML5 Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">HTML5 Survey Form</h1>
+    <p id="description">Please enter your information and opinions about HTML5</p>
+    <form id="survey-form">
+      <!-- Personal info -->
+      <fieldset>
+        <label id="name-label" for="name">Full name
+          <input id="name" type="text" placeholder="John Doe" required />
+        </label>
+        <label id="email-label" for="email">Email
+          <input id="email" type="email" placeholder="jdoe@gmail.com" required />
+        </label>
+        <label id="number-label" for="number">Age <span class="optional">(Optional)</span>
+          <input id="number" type="number" min="0" max="200" placeholder="40" />
+        </label>
+        <label>What is your HTML5 experience level?
+          <select id="dropdown">
+            <option value="">--select one--</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <!-- Opinions on HTML5 -->
+      <fieldset> <!-- Opinions on number of elements -->
+        <legend>Should HTML5 have fewer elements, more elements, or no change?</legend>
+        <label for="fewer">
+          <input id="fewer" type="radio" class="inline" name="radio-elements" value="fewer" /> Fewer
+        </label>
+        <label for="more">
+          <input id="more" type="radio" class="inline" name="radio-elements" value="more" /> More
+        </label>
+        <label for="no-change">
+          <input id="no-change" type="radio" class="inline" name="radio-elements" value="no-change" checked /> No change
+        </label>
+      </fieldset>
+      <fieldset> <!-- Regularly used elements -->
+        <legend> Which elements do you use regularly?</legend>
+        <label>
+          <input type="checkbox" class="inline" value="input" /> input
+        </label>
+        <label>
+          <input type="checkbox" class="inline" value="button" /> button
+        </label>
+        <label>
+          <input type="checkbox" class="inline" value="checkbox" /> form
+        </label>
+        <label>
+          <input type="checkbox" class="inline" value="table" /> table
+        </label>
+        <label>
+          <input type="checkbox" class="inline" value="a" /> a
+        </label>
+        <label>
+          <input type="checkbox" class="inline" value="p" /> p
+        </label>
+        <label>
+          <input type="checkbox" class="inline" value="list" /> ul / ol
+        </label>
+        <label>
+          <input type="checkbox" class="inline" value="img" /> img
+        </label>
+        <label>
+          <input type="checkbox" class="inline" value="hr" /> hr
+        </label>
+        <label>
+          <input type="checkbox" class="inline" value="script" /> script
+        </label>
+      </fieldset>
+      <fieldset>
+        <label for="additional-comments"> Do you have any additional comments?
+          <textarea id="additional-comments"></textarea>
+        </label>
+      </fieldset>
+      <button id="submit" type="submit">Submit</button>
+    </form>
+  </body>
+</html>
