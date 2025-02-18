@@ -1,0 +1,61 @@
+/*
+  Color palette by realtimecolors.com
+  --text: #fad9ea;
+  --background: #12020a;
+  --primary: #f18cb6;
+  --secondary: #934712;
+  --accent: #e4b121;
+*/
+
+body {
+  background: #12020a;
+  color: #fad9ea;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 1px;
+  background: #e4b121;
+  color: #12020a;
+}
+
+#subtitle {
+  font-size: 1.1em;
+}
+
+#img-div {
+  background: #f18cb6;
+  color: #12020a;
+  margin: 0;
+  border-radius: 15px;
+}
+
+#img-citation {
+  text-align: center
+}
+
+#image {
+  display: block;
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+#img-caption {
+  text-align: center;
+  margin-top: 5px;
+}
+
+#quote {
+  margin: 0 30px;
+}
+
+#read-more {
+  text-align: center;
+  background: #f18cb6;
+  color: #12020a;
+  padding: 10px 0;
+  border-radius: 15px;
+}
