@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Basic C++ Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>Basic C++ Documentation</header>
+      <ul>
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#Variables">Variables</a></li>
+        <li><a class="nav-link" href="#Input_and_Output">Input and Output</a></li>
+        <li><a class="nav-link" href="#Math">Math</a></li>
+        <li><a class="nav-link" href="#Functions">Functions</a></li>
+        <li><a class="nav-link" href="#If-Else_Statements">If-Else Statements</a></li>
+        <li><a class="nav-link" href="#Loops">Loops</a></li>
+        <li><a class="nav-link" href="#Arrays">Arrays</a></li>
+        <li><a class="nav-link" href="#Structures">Structures</a></li>
+        <li><a class="nav-link" href="#Classes">Classes</a></li>
+        <li><a class="nav-link" href="#Pointers">Pointers</a></li>
+        <li><a class="nav-link" href="#Reference">Reference</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-doc">
+      <section id="Introduction" class="main-section">
+        <header>Introduction</header>
+        <article>
+          <p>This documentation does not cover every aspect of C++ and it is not the most in-depth documentation. However, it is a good reminder of syntax for the most common parts of C++.</p>
+        </article>
+      </section>
+      <section id="Variables" class="main-section">
+        <header>Variables</header>
+        <article>
+          <p>Variables are pieces of data in memory. They are declared with a data type, a name, and (optionally) an initial value.</p>
+          <code>int number = 7;
+            char letter = 'a';
+            bool boolean = true;</code>
+        </article>
+      </section>
+
+      <section id="Input_and_Output" class="main-section">
+        <header>Input and Output</header>
+        <article>
+          <p>To use the input and output streams explained in this documentation, you must include the following lines at the top of your code: </p>
+          <code>#include &lt;iostream&gt;
+using namespace std;</code>
+
+          <p>You can then print to the console with the keyword cout, two less than signs (&lt;&lt;), and a text surrounded by double quotes ("")</p>
+          <code>cout &lt;&lt; "Hello world!";</code>
+
+          <p>You can get input from the console with cin, two greater than signs (&gt;&gt;), and a variable. The following is a simple program which gets a character from a user:</p>
+          <code>char letter;
+            cout &lt;&lt; "Enter a letter: ";
+            cin &gt;&gt; letter;
+            cout &lt;&lt; "You entered " &lt;&lt; letter;</code>
+        </article>
+      </section>
+
+      <section id="Math" class="main-section">
+        <header>Math</header>
+        <article>
+          <p>The five arithmetic operations in C++ are:</p>
+          <ul>
+            <li>addition with +</li>
+            <li>subtraction with -</li>
+            <li>multiplication with *</li>
+            <li>division with /</li>
+            <li>modulo (remainer from division) with %</li>
+          </ul>
+          <code>int num1 = 7 + 3;
+            int num2 = num1 - 4;
+            int result = num1 * num2;</code>
+
+          <p>Additional math functions can be used with the cmath library. (See the next section for more information on functions.)</p>
+          <code>#include &lt;cmath&gt;
+            cos(num1); //cosine
+            log(num2); //logarithm</code>
+        </article>
+      </section>
+
+      <section id="Functions" class="main-section">
+        <header>Functions</header>
+        <article>
+          <p>Functions break a program into smaller, more manageable parts. Functions may slightly decrease the performance of a program, but they greatly increase readability. The following code demonstrates a function which multiplies an integer by two.</p>
+          <code>#include &lt;iostream&gt;
+            using namespace std;
+
+            int mul2 (int num) {
+            &nbsp;&nbsp;num = num * 2;
+            &nbsp;&nbsp;return num;
+            }
+
+            int main() {
+            &nbsp;&nbsp;int input, result;
+            &nbsp;&nbsp;cout << "Enter an integer: ";
+            &nbsp;&nbsp;cin >> input;
+            &nbsp;&nbsp;result = mul2(input);
+            &nbsp;&nbsp;cout << "The result is " << result;
+            }</code>
+        </article>
+      </section>
+
+      <section id="If-Else_Statements" class="main-section">
+        <header>If-Else Statements</header>
+        <article>
+          <p>If-Else statements control how a program behaves based on the value of a variable.</p>
+          <code>if (x == 5) {
+            &nbsp;&nbsp;cout &lt;&lt; "x is 5";
+            }
+            else {
+            &nbsp;&nbsp;cout &lt;&lt; "x is not 5";
+            }</code>
+        </article>
+      </section>
+      
+      <section id="Loops" class="main-section">
+        <header>Loops</header>
+        <article>
+          <p>
+            The most important C++ loops are the for loop and while loop. The for loop executes a specific number of times, and the while loop executes as long as its condition is true. The following loops print the numbers 1-5 and 6-10 respectively
+          </p>
+          <code>for (int i = 1; i < 6; i++) {
+            &nbsp;&nbsp;cout << i;
+            }
+
+            int j = 6;
+            while (j < 11) {
+            &nbsp;&nbsp;cout &lt;&lt; j;
+            &nbsp;&nbsp;j++;
+            }</code>
+        </article>
+      </section>
+
+      <section id="Arrays" class="main-section">
+        <header>Arrays</header>
+        <article>
+          <p>An array is a series of elements. While a variable can be visualized as a car, an array is more like a caravan.</p>
+          <p>
+            You can declare an array of five characters with:
+          </p>
+          <code>char array[5];</code>
+
+          <p>
+            In C++, array elements start at 0. To set the first element of your array to a and the second element to b write: 
+          </p>
+          <code>array[0] = 'a';
+            array[1] = 'b';</code>
+        </article>
+      </section>
+ 
+      <section id="Structures" class="main-section">
+        <header>Structures</header>
+        <article>
+          <p>Structures group related data together. For example: a number of rooms and vacancy status can be grouped into a House structure.</p>
+          <code>struct House {
+            &nbsp;&nbsp;int rooms = 2;
+            &nbsp;&nbsp;bool vacant = false;
+            }</code>
+        </article>
+      </section>
+
+      <section id="Classes" class="main-section">
+        <header>Classes</header>
+        <article>
+          <p>Classes, like structures, group related data, but classes also have their own functions. Private members are only accessible within the class, but public members are accessible wherever the class can be used.</p>
+          <code>class Cat {
+            &nbsp;&nbsp;private:
+            &nbsp;&nbsp;&nbsp;&nbsp;string name;
+            &nbsp;&nbsp;&nbsp;&nbsp;int hunger;
+            &nbsp;&nbsp;public:
+            &nbsp;&nbsp;&nbsp;&nbsp;feedCat(){hunger--;}
+            }</code>
+        </article>
+      </section>
+
+      <section id="Pointers" class="main-section">
+        <header>Pointers</header>
+        <article>
+          <p>Variables store data, but pointers store a variable's location in memory. Pointer declarations require an asterisk (*), assignment requires an ampersand (&amp;), and the value being pointed to can be dereferenced with an asterisk.</p>
+          <code>int num = 7;
+            int *ptr;
+            
+            ptr = &amp;num;
+            cout &lt;&lt; *ptr;
+            </code>
+        </article>
+      </section>
+      
+      <section id="Reference" class="main-section">
+        <header>Reference</header>
+        <article>
+          Information from <a href="https://cplusplus.com/doc/tutorial/" target="_blank">cplusplus.com</a>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
