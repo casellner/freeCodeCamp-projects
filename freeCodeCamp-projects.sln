@@ -1,0 +1,32 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundational C# with Microsoft", "Foundational C# with Microsoft", "{FDE3BA2C-D999-E351-AD93-B7158B0AEE86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CsharpProjects", "CsharpProjects", "{1D3748F3-975A-105F-D19D-32A215E625FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "Foundational C# with Microsoft\CsharpProjects\TestProject\TestProject.csproj", "{267FEA77-55CD-AFA0-F11E-96360412A365}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{267FEA77-55CD-AFA0-F11E-96360412A365}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{267FEA77-55CD-AFA0-F11E-96360412A365}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{267FEA77-55CD-AFA0-F11E-96360412A365}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{267FEA77-55CD-AFA0-F11E-96360412A365}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1D3748F3-975A-105F-D19D-32A215E625FE} = {FDE3BA2C-D999-E351-AD93-B7158B0AEE86}
+		{267FEA77-55CD-AFA0-F11E-96360412A365} = {1D3748F3-975A-105F-D19D-32A215E625FE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1BA99E26-7B4C-43A4-BB1D-5BEE47D99A40}
+	EndGlobalSection
+EndGlobal
