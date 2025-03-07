@@ -1,23 +1,25 @@
 ﻿/*
-    The following code reverses a string and
-    counts the number of times a particular character appears.
+Random coin = new Random();
+string coinFlip = coin.Next(0, 2) == 0 ? "heads" : "tails";
+
+Console.WriteLine(coinFlip);
 */
-string originalMessage = "The quick brown fox jumps over the lazy dog.";
 
-char[] message = originalMessage.ToCharArray();
-Array.Reverse(message);
+string permission = "Admin|Manager";
+int level = 55;
 
-int letterCount = 0;
-
-foreach (char letter in message)
-{
-    if (letter == 'o')
-    {
-        letterCount++;
+if (permission.Contains("Admin")) {
+    if (level > 55) {
+        Console.WriteLine("Welcome, Super Admin user.");
+    } else {
+        Console.WriteLine("Welcome, Admin user.");
     }
+} else if (permission.Contains("Manager")) {
+    if (level >= 20) {
+        Console.WriteLine("Contact an Admin for access.");
+    } else {
+        Console.WriteLine("You do not have sufficient privileges.");
+    }
+} else {
+    Console.WriteLine("You do not have sufficient privileges.");
 }
-
-string newMessage = new String(message);
-
-Console.WriteLine(newMessage);
-Console.WriteLine($"'o' appears {letterCount} times.");
