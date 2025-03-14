@@ -1,73 +1,44 @@
-﻿/*
-string? readResult;
-bool validEntry = false;
-bool inRange = false;
-int numericEntry;
+﻿
+Console.WriteLine("Signed integral types:");
 
-Console.WriteLine("Enter an integer value between 5 and 10");
+Console.WriteLine($"sbyte  : {sbyte.MinValue} to {sbyte.MaxValue}");
+Console.WriteLine($"short  : {short.MinValue} to {short.MaxValue}");
+Console.WriteLine($"int    : {int.MinValue} to {int.MaxValue}");
+Console.WriteLine($"long   : {long.MinValue} to {long.MaxValue}");
 
-do {
-    readResult = Console.ReadLine();
-    validEntry = int.TryParse(readResult, out numericEntry);
+Console.WriteLine("");
+Console.WriteLine("Unsigned integral types:");
 
-    if (validEntry) {
-        if (numericEntry >= 5 && numericEntry <= 10) {
-            inRange = true;
-            Console.WriteLine($"Your input value ({numericEntry}) has been accepted.");
-        } else {
-            Console.WriteLine($"You entered {numericEntry}. Please enter a number between 5 and 10.");
-        }
-    } else {
-        Console.WriteLine("Sorry, you entered an invalid number, please try again");
-    }
-} while (inRange == false);
-*/
+Console.WriteLine($"byte   : {byte.MinValue} to {byte.MaxValue}");
+Console.WriteLine($"ushort : {ushort.MinValue} to {ushort.MaxValue}");
+Console.WriteLine($"uint   : {uint.MinValue} to {uint.MaxValue}");
+Console.WriteLine($"ulong  : {ulong.MinValue} to {ulong.MaxValue}");
 
 /*
-string? readResult;
-string parsedResult = "";
-bool matches = false;
-
-Console.WriteLine("Enter your role name (Administrator, Manager, or User)");
-
-do {
-    readResult = Console.ReadLine();
-    if (readResult != null) {
-        parsedResult = readResult.Trim().ToLower();
-    }
-    switch (parsedResult) {
-        case "administrator":
-            matches = true;
-            break;
-        case "manager":
-            matches = true;
-            break;
-        case "user":
-            matches = true;
-            break;
-        default:
-            Console.WriteLine($"The role name that you entered, \"{readResult}\" is not valid. Enter your role name (Administrator, Manager, or User)");
-            break;
-    }
-} while (matches == false);
-
-Console.WriteLine($"Your input value ({readResult}) has been accepted.");
+Console.WriteLine("");
+Console.WriteLine("Floating point types:");
+Console.WriteLine($"float  : {float.MinValue} to {float.MaxValue} (with ~6-9 digits of precision)");
+Console.WriteLine($"double : {double.MinValue} to {double.MaxValue} (with ~15-17 digits of precision)");
+Console.WriteLine($"decimal: {decimal.MinValue} to {decimal.MaxValue} (with 28-29 digits of precision)");
 */
+/*
+int[] data = new int[3];
 
-string[] myStrings = new string[2] { "I like pizza. I like roast chicken. I like salad", "I like all three of the menu choices" };
-string myString;
-int periodLocation;
-string sentence;
+string shortenedString = "Hello World!";
+Console.WriteLine(shortenedString + "\n");
 
-for (int i = 0; i < myStrings.Length; i++) {
-    myString = myStrings[i];
-    periodLocation = myString.IndexOf(".");
-    
-    while (periodLocation != -1) {
-        sentence = myString.Substring(0, periodLocation);
-        myString = myString.Remove(0, periodLocation + 1).TrimStart();
-        Console.WriteLine(sentence);
-        periodLocation = myString.IndexOf(".");
-    }
-    Console.WriteLine(myString);
-}
+int val_A = 2;
+int val_B = val_A;
+val_B = 5;
+Console.WriteLine("--Value Types--");
+Console.WriteLine($"val_A: {val_A}");
+Console.WriteLine($"val_B: {val_B}\n");
+
+int[] ref_A= new int[1];
+ref_A[0] = 2;
+int[] ref_B = ref_A;
+ref_B[0] = 5;
+Console.WriteLine("--Reference Types--");
+Console.WriteLine($"ref_A[0]: {ref_A[0]}");
+Console.WriteLine($"ref_B[0]: {ref_B[0]}\n");
+*/
