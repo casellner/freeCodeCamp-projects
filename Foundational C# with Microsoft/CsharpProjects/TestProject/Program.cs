@@ -1,13 +1,29 @@
-﻿string orderStream = "B123,C234,A345,C15,B177,G3003,C235,B179";
-string[] orderArray = orderStream.Split(',');
-Array.Sort(orderArray);
+﻿string customerName = "Ms. Barros";
 
-for (int i = 0; i < orderArray.Length; i++)
-{
-    Console.Write(orderArray[i] + "\t");
-    if (orderArray[i].Length != 4)
-    {
-        Console.Write("- Error");
-    }
-    Console.WriteLine("");
-}
+string currentProduct = "Magic Yield";
+int currentShares = 2975000;
+decimal currentReturn = 0.1275m;
+decimal currentProfit = 55000000.0m;
+
+string newProduct = "Glorious Future";
+decimal newReturn = 0.13125m;
+decimal newProfit = 63000000.0m;
+
+Console.WriteLine($"Dear {customerName},");
+Console.WriteLine($"As a customer of our {currentProduct} offering we are excited to tell you about a new financial product that would dramatically increase your return.");
+Console.WriteLine("");
+
+Console.WriteLine($"Currently, you own {currentShares:N2} shares at a return of {currentReturn:P}.");
+Console.WriteLine("");
+
+Console.WriteLine($"Our new product, {newProduct} offers a return of {newReturn:P2}.  Given your current volume, your potential profit would be {newProfit:N2}.");
+Console.WriteLine("");
+
+Console.WriteLine("Here's a quick comparison:\n");
+
+string comparisonMessage = "";
+
+comparisonMessage += currentProduct.PadRight(20) + String.Format($"{currentReturn:P2}").PadRight(9) + String.Format($"{currentProfit:N2}") + "\n";
+comparisonMessage += newProduct.PadRight(20) + String.Format($"{newReturn:P2}").PadRight(9) + String.Format($"{newProfit:N2}");
+
+Console.WriteLine(comparisonMessage);
