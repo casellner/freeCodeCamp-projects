@@ -1,29 +1,29 @@
-﻿string customerName = "Ms. Barros";
+﻿const string input = "<div><h2>Widgets &trade;</h2><span>5000</span></div>";
 
-string currentProduct = "Magic Yield";
-int currentShares = 2975000;
-decimal currentReturn = 0.1275m;
-decimal currentProfit = 55000000.0m;
+string quantity = "";
+string output = "";
 
-string newProduct = "Glorious Future";
-decimal newReturn = 0.13125m;
-decimal newProfit = 63000000.0m;
+// define tags to look for
+const string openSpan = "<span>";
+const string closeSpan = "</span>";
+const string openDiv = "<div>";
+const string closeDiv = "</div>";
 
-Console.WriteLine($"Dear {customerName},");
-Console.WriteLine($"As a customer of our {currentProduct} offering we are excited to tell you about a new financial product that would dramatically increase your return.");
-Console.WriteLine("");
+int openingPosition = input.IndexOf(openSpan);
+int closingPosition = input.IndexOf(closeSpan);
 
-Console.WriteLine($"Currently, you own {currentShares:N2} shares at a return of {currentReturn:P}.");
-Console.WriteLine("");
+openingPosition += openSpan.Length; // skip over the span
+int length = closingPosition - openingPosition;
+quantity += "Quantity: " + input.Substring(openingPosition, length);
 
-Console.WriteLine($"Our new product, {newProduct} offers a return of {newReturn:P2}.  Given your current volume, your potential profit would be {newProfit:N2}.");
-Console.WriteLine("");
+// copy input to output and remove <div> tags
+output += "Output: " + input;
+openingPosition = output.IndexOf(openDiv);
+output = output.Remove(openingPosition, openDiv.Length);
+closingPosition = output.IndexOf(closeDiv);
+output = output.Remove(closingPosition, closeDiv.Length);
 
-Console.WriteLine("Here's a quick comparison:\n");
+output = output.Replace("&trade;", "&reg;");
 
-string comparisonMessage = "";
-
-comparisonMessage += currentProduct.PadRight(20) + String.Format($"{currentReturn:P2}").PadRight(9) + String.Format($"{currentProfit:N2}") + "\n";
-comparisonMessage += newProduct.PadRight(20) + String.Format($"{newReturn:P2}").PadRight(9) + String.Format($"{newProfit:N2}");
-
-Console.WriteLine(comparisonMessage);
+Console.WriteLine(quantity);
+Console.WriteLine(output);
